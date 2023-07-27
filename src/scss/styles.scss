@@ -22,7 +22,7 @@ button {
     display: flex;
     border-radius: 1rem !important;
     border: 0rem !important;            //togliere se ci sono linee bianche (solo riga)
-    transition: border-radius 0.5s ease;
+    transition: border-radius 0.5s ease-in-out;
 }
 
 .card:hover{                            //togliere se ci sono linee bianche (tutto)
@@ -35,7 +35,7 @@ button {
     background-color: #c8c8c8;
     color: #515151;
     border-radius: 1rem !important;
-    transition: all 0.5s ease; //togliere se ci sono linee bianche (solo riga)
+    transition: all 0.5s ease-in-out; //togliere se ci sono linee bianche (solo riga)
     border: 0rem !important;
 
 }
@@ -85,7 +85,7 @@ h3{
 }
 
 .btn-group button:hover{
-    background-color: #f7f7f7;
+    background-color: #aaaaaa !important;
     color: #515151;
     border: 1px solid #515151;
 
@@ -190,7 +190,7 @@ a:active{
 
 #showDialog:hover{
     color: #434343;
-    background-color: #f7f7f7;
+    background-color: #e3e3e3;
     border: 1px solid #434343;
     -webkit-box-shadow: 0px 0px 16px 1px #000000; 
 box-shadow: 0px 0px 16px 1px #000000;
@@ -245,10 +245,10 @@ button:focus {
 
 .compShad{
     box-shadow: 0px 9px 42px -6px #71967b;
-    transition: all 0.7s ease;
+    transition: all 0.7s ease-in-out;
 }
 
 .uncompShad{
     box-shadow: 0px 9px 35px -6px #967171;
-    transition: all 0.7s ease;
+    transition: all 0.7s ease-in-out;
 }

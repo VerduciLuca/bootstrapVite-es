@@ -182,3 +182,27 @@ function addTodo(){
 function changeHeader(){
     document.querySelector('h1').innerHTML='lo sapevo che non avresti resistito!!!'
 }
+
+const words = [
+    "Manager",
+    "Organizer",
+    "Planner",
+    "Arranger",
+    "Mastermind",
+    "Maker",
+    "Builder",
+    "Creator",
+    "Formulator",
+    "Architect"
+];
+
+
+setInterval(changeText, 3500);
+
+function changeText() {
+    const changingElement = document.querySelector(".changingText");
+    const randomIndex = Math.floor(Math.random() * words.length);
+    changingElement.textContent = words[randomIndex];
+}
+
+changeText();

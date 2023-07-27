@@ -56,9 +56,11 @@ function render(){
 
         if(todo.isCompleted){
             // div.classList.add('todo-completed');
-            div.style.boxShadow='0px 9px 42px -6px #71967b';
+            div.classList.add('compShad')
+            // div.style.boxShadow='0px 9px 42px -6px #71967b';
         } else {
-            div.style.boxShadow= '0px 9px 35px -6px #967171';
+            div.classList.add('uncompShad')
+            // div.style.boxShadow= '0px 9px 35px -6px #967171';
         }
 
         const divBody = document.createElement('div');
@@ -71,15 +73,17 @@ function render(){
         titleStrong.appendChild(titleNode);
         divBody.appendChild(titleStrong);
         
+        const [dateNoTime] = todo.creationDate.toISOString().split('T')
+
         const dateSpan=document.createElement('span');
-        const dateNode=document.createTextNode(todo.creationDate.toISOString());
+        const dateNode=document.createTextNode('Creation date:' + ' ' + dateNoTime);
         dateSpan.classList.add('card-text'); // data
 
         dateSpan.appendChild(dateNode);
         divBody.appendChild(dateSpan);
 
         const completeBtn = document.createElement('button');
-        const completeNode = document.createTextNode( todo.isCompleted ? 'da completare' : 'completato');
+        const completeNode = document.createTextNode( todo.isCompleted ? 'Uncomplete' : 'Completed');
         completeBtn.classList.add('btn', 'btn-primary');
         completeBtn.type = 'button';
         completeBtn.addEventListener('click', () => {
@@ -111,7 +115,7 @@ function render(){
 
 
         const deleteBtn = document.createElement('button');
-        const deleteNode = document.createTextNode('cancella');
+        const deleteNode = document.createTextNode('Delete');
         deleteBtn.classList.add('btn', 'btn-primary');
         deleteBtn.type = 'button';
         deleteBtn.addEventListener('click', () => {

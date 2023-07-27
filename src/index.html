@@ -13,33 +13,41 @@
     <div class="order">
         <div class="btn-group" role="group">
             <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-              Ordina per:
+              Order by:
             </button>
             <ul class="dropdown-menu">
-              <li><a id="orderAZ" class="dropdown-item" href="#">A-Z</a></li>
-              <li><a id="orderDate" class="dropdown-item" href="#">Data</a></li>
+              <li><a id="orderAZ" class="dropdown-item" href="#">Name A-Z</a></li>
+              <li><a id="orderDate" class="dropdown-item" href="#">Creation date</a></li>
             </ul>
           </div>        
     </div>
 <div class="container-fluid" id="todo-container">
   </div>
+
+  <div class="disclaimer">
+    <span>Completed To Dos will have a <span class="green">green</span> aura, incompleted ones will have a <span class="red">red</span> one</span>
+  </div>
+
   <div>
     <!-- A modal dialog containing a form -->
     <dialog id="newShowDialog">
         <form id="create-form" name="create" method="dialog">
             <div>
-                <label for="title">Inserisci nuovo Todo</label>
-                <input type="text" name="title" id="title" required>
+
+                <input type="text" name="title" id="title" required class="form-control" placeholder="Write your new task">
+            </div>
+            <div class="btn-div">
+                <button id="cancelButton" class="btn btn-primary">Cancel</button>
+                <button id="confirmBtn" class="btn btn-primary" type="submit" formmethod="dialog">Confirm</button>
             </div>
             <div>
-                <button id="cancelButton">Annulla</button>
-                <button id="confirmBtn" type="submit" formmethod="dialog">Conferma</button>
+              <span>Your To Do will be added with the current date</span>
             </div>
         </form>
     </dialog>
-    <p>
-        <button id="showDialog">+</button>
-    </p>
+    
+        <button id="showDialog"></button>
+    
 </div>
     <script type="module" src="./js/main.js"></script>
   </body>
